@@ -1,0 +1,34 @@
+.scroll {
+  overflow-x: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-list {
+  display: flex;
+  padding: 20px;
+}
+
+.movie-item {
+  flex-shrink: 0;
+  margin-right: 35px;
+  width: 220px;
+  height: auto;
+  position: relative; /* Add a relative position to the movie-item */
+  overflow: hidden; /* Hide any overflowing content */
+  transition: transform 0.3s ease; /* Add a smooth transition to the transform property */
+}
+.favs {
+  opacity: 0; /* Start with opacity 0 to hide the AddFavourites component */
+  z-index: 999;
+}
+
+.images:hover .favs {
+  opacity: 1; /* Show the AddFavourites component when hovering over the image */
+}
+
+.images:hover .movie-item {
+  transform: scale(1.2); /* Zoom in the image on hover */
+}
